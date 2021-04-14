@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>Balogh Bíborka</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="stilus.css" rel="stylesheet" type="text/css"/>
         <script src="urlapKezeles.js" type="text/javascript"></script>
     </head>
     <body>
@@ -25,42 +26,71 @@ and open the template in the editor.
             <article>
                 <h2>Kérem adja meg az adatait!</h2>
                 <form method="get" >
-                    <fieldset>
+                    <fieldset id="fieldset">
                         <div class="urlapelem" >
                             <label for="nev">Név</label>
                             <input type="text" name="nev" id="nev" placeholder="Adja meg a nevét!" title="A név nagybetűvel kezdődik és legalább 3 karakter!" >                           
                         </div> 
-                        <div id="urlapelem2">
+                        <div class="urlapelem2">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="email" placeholder="valaki@vmi.hu ">
                         </div>
-                        <div id="urlapelem2">
+                        <div class="urlapelem2">
                             <label for="email">E-mail újra</label>
                             <input type="email" name="email2" id="email2" placeholder="valaki@vmi.hu ">
                         </div>
+                        <div class="urlapelem">
+                            <label for="tel">Telefonszám</label>
+                            <input type="tel" name="tel" id="tel" placeholder="+36-30-000-0000">
+                        </div>
                     </fieldset>
-                    <input type="button" id="kuld" value="kuld">
-                    </article>
-                    <aside>
-                        <section>
-                            <h3>
-                                Űrlap validáció</h3>
-                            <p>
-                                Itt jelenik majd meg, hogy van-e hiba az űrlap kitöltésekor. Például űres mező, vagy nem megfelelő formátumú e-mail cím, weboldal, telefonszám.
-                            </p>
+                    <fieldset id="fieldset">
+                        <div class="urlapelem">
+                            <label for="url">Weboldal</label>
+                            <input type="url" name="url" id="url" placeholder="http://valami.hu">
+                        </div>
+                        <div class="urlapelem3">
+                            <label for="valaszt">Prioritás</label>
+                            <select>
+                                <option>alacsony</option>
+                                <option>közepes</option>
+                                <option>magas</option>
+                            </select>
+                        </div>
+                        <div class="urlapelem">
+                            <div id="uzenet">
+                                <label for="üzenet">Üzenet</label>
+                            </div>
+                            <div>
+                                <textarea rows="4" cols="22" name="üzenet" id="üzenet"></textarea>
+                            </div>       
+                        </div>                      
+                    </fieldset>
+                    <div class="gombok">
+                        <input type="button" id="kuld" value="küld">
+                        <input type="button" id="torol" value="Töröl"> 
+                    </div>
 
-                        </section>
-                        <section>
-                            <h3>Űrlap adatok</h3>
-                            <p>
-                                Itt jelennek majd meg az űrlapon megadott adatok  </p>
-                        </section>
+            </article>
+            <aside>
+                <section id="urlapValidacio">
+                    <h3>
+                        Űrlap validáció</h3>
+                    <p>
+                        Itt jelenik majd meg, hogy van-e hiba az űrlap kitöltésekor. Például űres mező, vagy nem megfelelő formátumú e-mail cím, weboldal, telefonszám.
+                    </p>
+                </section>
+                <section id="urlapAdatok">
+                    <h3>Űrlap adatok</h3>
+                    <p>
+                        Itt jelennek majd meg az űrlapon megadott adatok  </p>
+                </section>
 
 
-                    </aside>
-                    <footer>
-                        <p></p>
-                    </footer>
-                    </main>
-                    </body>
-                    </html>
+            </aside>
+            <footer>
+                <p>Céggel kapcsolatos információk</p>
+            </footer>
+        </main>
+    </body>
+</html>
