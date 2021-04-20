@@ -22,7 +22,6 @@ function validalas() {
     var filter = /[A-Z]+[a-z]{2,}/;
     if (!filter.test(ID("nev").value)) {
         hiba += "A név nagybetűvel kezdődjön és legalább 3 karakter legyen!";
-        urlapAdatok += "Hiba: " + ID("nev").value + "<br>";
         ID("nev").style.border = "3px solid red";
 
     } else {
@@ -32,8 +31,7 @@ function validalas() {
 
     var filter = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!filter.test(ID("email").value)) {
-        hiba = "Az e-mail nem tartalmaz elég karakter vagy hiányzik a @-jel (valaki@vmi.hu)!";
-        urlapAdatok += "Email: " + ID("email").value + "<br>";
+        hiba += "Az e-mail nem tartalmaz elég karakter vagy hiányzik a @-jel (valaki@vmi.hu)!";
         ID("email").style.border = "3px solid red";
         ID("email2").style.border = "3px solid red";
     } else {
