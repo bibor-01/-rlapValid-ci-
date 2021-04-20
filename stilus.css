@@ -108,24 +108,39 @@ nav a{
     padding: 5px;
 }
 @media only screen and (max-width: 700px){
+    main{
+        grid-template-areas:
+            "h"
+            "n"
+            "a"
+            "s"
+            "f";
+    }
+    fieldset input{
+        width: 100%;
+        margin-bottom: 5px;
 
+    }
     .urlapelem{
         text-align: left;
-        margin: 2px;
+        padding-right: 5px;
     }
     .urlapelem2{
         text-align: left;
+        padding-right: 5px;
     }
     #kuld{
         width: 40%;
         margin-left: 30%;
-        margin-right: 30%
+        margin-right: 30%;
+
 
     }
     #torol{
         width: 40%;
         margin-left: 30%;
-        margin-right: 30%
+        margin-right: 30%;
+
     }
 }
 
